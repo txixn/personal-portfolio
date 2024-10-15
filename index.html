@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myweb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/167a0caaee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div id="bg">
+        
+    </div>
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!----<i class="fa-solid fa-x"></i>----->
+        </ul>
+        <!----<i class="fa-solid fa-bars"></i>----->
+
+    </nav>
+    <div id="header-text">
+        <p>JUNIOR SOFTWARE DEVELOPER</p>
+        <h1>Hello ,IAM <span>THIRUMURUGAN</span> <br>From <span>INDIA</span></h1>
+    </div>
+</div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="photo/IMG_0200.JPG" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate and dedicated junior
+                     software developer with a love for crafting 
+                    innovative digital solutions. With a strong foundation in both front-end and back-end 
+                    technologies, I thrive in the dynamic world of 
+                    web development. My journey began with a 
+                    fascination for coding, which led me to acquire proficiency in languages such as HTML, CSS, JavaScript. On the server-side, I excel 
+                    in languages like java, along with experience in database management using SQL and  databases
+                    . My problem-solving skills and attention to detail ensure that I can tackle complex challenges and deliver robust, user-friendly applications.
+                     I am constantly Learning and evolving in this ever-changing field, always excited to take on new projects 
+                    and collaborate with like-minded 
+                    individuals.</p>
+                    <div id="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')"> Technical Skills</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span></span><br>HTML,CSS,JavaScript</li>
+                            <li><span></span><BR>JAVA</li>
+                            <li><span></span><BR>MYSQL</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li><span>Bus Reservation System</span><BR>JAVA SQL</li>
+                            <li><span>Portfolio</span><BR>HTML CSS JAVASCRIPT</li>
+
+                        </ul>
+                        
+
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Schooling</span><br>Dhanalakshmi Higher Secondary School.</li>
+                            <li><span>Bachelor of Engineering in CSE</span><BR>S.A Engineering College.</li>
+                          
+
+                        </ul>
+                    </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>As a web designer, my goal is to craft visually appealing and user-friendly 
+                    websites that not only capture the essence of a brand but also provide a 
+                    seamless and engaging online experience for visitors. </p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX</h2>
+                <p> As a UI/UX designer, my primary focus is on crafting seamless and engaging 
+                    user experiences. I strive to create intuitive interfaces that not only 
+                    look visually appealing but also function effortlessly </p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Data Analyst</h2>
+                <p>As a data analyst, my role is to transform raw data into actionable insights. I gather, clean, and analyze data to help organizations make informed decisions. I use statistical techniques and data visualization tools to uncover trends, patterns, and anomalies
+                     in the data, enabling stakeholders to understand their business 
+                     better.</p>
+                    <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-----contact--------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>
+                    thirumurugans124@gmail.com</p>
+                <p><i class="fa-brands fa-whatsapp"></i>
+                    9940098998</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/thirumurugan-s-242a6a2b9"><i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    </a>
+                </div>
+                <a href="Resume/Resume_Image  PM.jpeg" download="" class="btn"><i class="fa-solid fa-download"></i>
+                     Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    } 
+</script>
+<script>
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent sucessfully!!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw_sJ8yj4u9UFlmdrBb5zMWPKsHxPW8A1JR0XYl82EsPjxL5dFTQKtLd6CNIOaEzzB4/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
